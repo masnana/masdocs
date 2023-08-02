@@ -1,0 +1,16 @@
+# Placeholders
+Placeholders allow for query parameters to be safely executed, preventing common SQL injection methods(opens in a new tab).
+
+Parameters can be passed an an array or map (referred to as named named parameters).
+```lua
+local identifier = 'license:abc123'
+local group = 'admin'
+ 
+exports.ghmattimysql:scalar('SELECT `username` FROM `users` WHERE `identifier` = ? AND `group` = ?', { identifier, group })
+ 
+-- Named placeholders (deprecated)
+exports.ghmattimysql:scalar('SELECT `username` FROM `users` WHERE `identifier` = @identifier AND `group` = @group', {
+    group = group
+    identifier = identifier
+})
+```

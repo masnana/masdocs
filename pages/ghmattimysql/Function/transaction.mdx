@@ -1,0 +1,26 @@
+---
+title: transaction
+---
+# transaction
+Transactions are multiple executes chained together, so that if one fails, all others fail too.
+
+# Table Format
+```lua
+local queries = {
+    {query = 'INSERT INTO `test` (id) VALUES (@id)', parameters = { id = 1 }},
+    {query = 'INSERT INTO `test` (id, name) VALUES (@id, @name)', values = { id = 2, name = 'bob' }},
+}
+```
+## Promise
+```lua
+local success = exports.ghmattimysql:transactionSync(queries)
+print(success)
+```
+
+## Callback
+```lua
+exports.ghmattimysql:transaction(queries, values, function(success)
+    print(success)
+end)
+```
+

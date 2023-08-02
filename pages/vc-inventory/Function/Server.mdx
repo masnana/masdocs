@@ -1,0 +1,50 @@
+# Server
+
+## AddItem
+
+Adds an item to player.
+
+```lua
+exports['vc-inventory']:AddItem(source, item, count, info, slot)
+```
+
+- source: `number`
+	- The source of the player
+- item: `string`
+	- The name of the item to add to the target.
+- count: `number`
+	- The number of items to add.
+- info?: `table` or `string`
+	- A table of unique data to attach to the item object. A string will create a table with the "type" field.
+- slot?: `number`
+	- A specific slot to add the item to. If the slot is invalid, the first available slot will be used instead.
+
+
+## RemoveItem
+
+Removes the specified item from player.
+
+```lua
+exports['vc-inventory']:RemoveItem(source, item, count, info, slot)
+```
+
+- source: `number`
+	- The source of the player
+- item: `string`
+  - The name of the item to remove from the target.
+- count: `number`
+  - The number of items to remove.
+- metadata?: `table` or `string`
+  - Only remove items with matching metadata properties.
+- slot?: `number`
+  - A specific slot to remove the item from. If the slot is invalid, the first available slot will be used instead.
+
+### Example
+
+```lua
+-- Add 2 document to the source player with provided information.
+local success = exports['vc-inventory']:AddItem(source, 'document', 2, {id = 459})
+
+-- Removes 2 document to the source player with provided information.
+local success = exports['vc-inventory']:RemoveItem(source, 'document', 2, {id = 459})
+```

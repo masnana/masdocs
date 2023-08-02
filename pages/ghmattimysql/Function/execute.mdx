@@ -1,0 +1,34 @@
+---
+title: execute
+---
+# Execute
+This is the universal function which will handle most of your requests.
+
+## Promise
+```lua
+local response = exports.ghmattimysql:executeSync('SELECT `firstname`, `lastname` FROM `users` WHERE `identifier` = ?', {
+    identifier
+})
+ 
+if response then
+    for i = 1, #response do
+        local row = response[i]
+        print(row.firstname, row.lastname)
+    end
+end
+```
+
+## Callback
+```lua
+exports.ghmattimysql:execute('SELECT `firstname`, `lastname` FROM `users` WHERE `identifier` = ?', {
+    identifier
+}, function(response)
+    if response then
+        for i = 1, #response do
+            local row = response[i]
+            print(row.firstname, row.lastname)
+        end
+    end
+end)
+```
+

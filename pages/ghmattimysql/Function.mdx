@@ -1,0 +1,25 @@
+# Execute
+
+### Callback
+- `exports.ghmattimysql:execute`
+- `exports.ghmattimysql:saclar`
+- `exports.ghmattimysql:transaction`
+### Promise
+- `exports.ghmattimysql:executeSync`
+- `exports.ghmattimysql:scalarSync`
+- `exports.ghmattimysql:transactionSync`
+
+`execute` response `INSERT` `UPDATE` `DELETE`
+
+```lua
+{
+  serverStatus = 2,
+  changedRows = 0,
+  insertId = 0,
+  message = "(Rows matched: 0  Changed: 0  Warnings: 0",
+  warningCount = 0,
+  affectedRows = 0,
+  protocol41 = "true",
+  fieldCount = 0,
+}
+```

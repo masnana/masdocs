@@ -1,0 +1,17 @@
+# Snippets
+
+### mythic_notify
+```lua filename="Client"
+exports['mythic_notify']:SendAlert(type, text, length)
+```
+```lua filename="Server"
+TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'Message', length = 5000 })
+```
+- type: `string`
+    - `inform` blue
+    - `succes` green
+    - `error` red
+- text: `string`
+    - the message
+- length?: `number`
+    - how long is the Notify is showing (default: 5000)

@@ -1,0 +1,65 @@
+# Server
+
+ `getPlayerFromId` or `playerModule`
+```lua
+local user = exports.redem_roleplay:getPlayerFromId(source)
+local user = exports.redem_roleplay:playerModule(source)
+```
+
+## Function
+```lua
+user.setFirstname(name)
+user.setLastname(name)
+user.setJob(job)
+user.setJobgrade(grade)
+user.setOrigin(origin)
+user.kick(reason)
+```
+
+## Charinfo
+```lua
+user.getName()
+user.getFirstname()
+user.getLastname()
+user.getJob()
+user.getJobgrade()
+user.getOrigin()
+user.getDOB()
+user.getGender()
+user.getPermissions()
+user.getIdentifier(i)
+user.getGroup()
+user.setSessionVar(key, value)
+user.getSessionVar('charid')
+```
+
+## Money
+```lua
+user.setMoney(amount)
+user.getMoney()
+user.addMoney(amount)
+user.removeMoney(amount)
+```
+
+## Bank
+```lua
+user.setBank(amount)
+user.getBank()
+user.addBank(amount)
+user.removeBank(amount)
+```
+
+## Vbit
+```lua
+user.getBit()
+user.removeBit(vbit, m, reason)
+```
+
+## Gold
+disabled
+```lua
+user.setGold(amount)
+user.getGold()
+user.addGold(amount)
+user.removeGold(amount)
+```

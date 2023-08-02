@@ -1,0 +1,24 @@
+---
+title: scalar
+---
+# Scalar
+You use this function when you want only a singular value returned. This means you can call it when when selecting exactly one row and one column.
+
+## Promise
+```lua
+local firstName = exports.ghmattimysql:scalarSync('SELECT `firstname` FROM `users` WHERE `identifier` = ? LIMIT 1', {
+    identifier
+})
+ 
+print(firstName)
+```
+
+## Callback
+```lua
+exports.ghmattimysql:scalar('SELECT `firstname` FROM `users` WHERE `identifier` = ? LIMIT 1', {
+    identifier
+}, function(firstName)
+    print(firstName)
+end)
+```
+

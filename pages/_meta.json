@@ -1,0 +1,15 @@
+{
+  "index": "Introduction",
+  "another": "Another Page",
+  "snippets": "Code Snippets",
+  "about": {
+    "title": "About",
+    "type": "page"
+  },
+  "contact": {
+    "title": "Contact ↗",
+    "type": "page",
+    "href": "https://twitter.com/_masnana",
+    "newWindow": true
+  }
+}
