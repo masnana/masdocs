@@ -1,7 +1,9 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
   "snippets": "Code Snippets",
+  "ghmattimysql": "ghmattimysql",
+  "fivem": "FiveM",
+  "redm": "RedM",
   "about": {
     "title": "About",
     "type": "page"

@@ -1,6 +1,6 @@
 # Snippets
 
-### mythic_notify
+## mythic_notify
 ```lua filename="Client"
 exports['mythic_notify']:SendAlert(type, text, length)
 ```
@@ -15,3 +15,12 @@ TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', 
     - the message
 - length?: `number`
     - how long is the Notify is showing (default: 5000)
+
+## setStress
+```lua
+exports['vc-hud']:setStress(amount)
+```
+- amount: `number` 
+    - `10` add 10 stress points
+    - `-10` remove 10 stress points
+    - max `100`
