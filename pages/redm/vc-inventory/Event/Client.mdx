@@ -1,0 +1,42 @@
+# Client
+
+### Stash
+```lua
+local cid = exports.redem_roleplay:isPed("cid")
+local level = exports['vc-identity'].getLevel()
+local stashName = 'banklevel' .. level .. '-' .. cid
+local data = {
+    maxweight = 500
+    slots = 40
+    label = 'Stash'
+}
+TriggerServerEvent("inventory:server:OpenInventory", "stash", stashName, data)
+TriggerEvent("inventory:client:SetCurrentStash", stashName)
+```
+- stashName: `string`
+- data?: `table`
+    - it will overwrite data from `data/invindex`
+
+### Crafting
+```lua
+TriggerEvent('inventory:client:OpenCraft', craftType, label?)
+```
+- craftType `string`
+    - check `data/crafting` for list
+- label? `string`
+    - default is `"Crafting"`
+
+### Shop
+```lua
+TriggerEvent('inventory:client:OpenShop', shopType, label)
+```
+- craftType `string`
+    - check `data/shops` for list
+- label? `string`
+    - default is `"Shop"`
+
+
+## Compability for old event
+```lua
+TriggerEvent('server-inventory-open', '1', sellName)
+```
