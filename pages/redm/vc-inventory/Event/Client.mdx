@@ -10,7 +10,7 @@ local data = {
     slots = 40
     label = 'Stash'
 }
-TriggerServerEvent("inventory:server:OpenInventory", "stash", stashName, data)
+TriggerEvent("inventory:server:OpenInventory", "stash", stashName, data)
 TriggerEvent("inventory:client:SetCurrentStash", stashName)
 ```
 - stashName: `string`
