@@ -1,0 +1,20 @@
+# Code Snippets
+
+## taskBar
+```lua
+exports['vc-taskbar']:taskBar(length, name, runCheck?, keepWeapon?, vehicle?, vehCheck?)
+```
+- length: `number`
+- name: `string`
+- runCheck?: `boolean`
+- vehicle?: `boolean`
+- vehicle?: `boolean`
+- vehCheck?: `boolean`
+
+Example:
+```lua
+local finished = exports['vc-taskbar']:taskBar(5000, 'Eating...')
+if finished then
+    -- do something
+end
+```
